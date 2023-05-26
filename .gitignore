@@ -114,3 +114,7 @@ fabric.properties
 # Naver Cloud Secret Key
 environment.json
 
+# python
+.idea
+venv
+
