@@ -23,7 +23,21 @@ class TranslationModel:
     __url = 'https://openapi.naver.com/v1/papago/n2mt'
     __naver_client_key = None
 
-    def __init__(self, envFilePath = '', source='en', target='ko'):
+    """
+    ================================================================
+
+    Singleton Pattern
+    글로벌하게 접근 가능한 단 한 개의 객체만을 허용하는 패턴
+
+    ================================================================
+    """
+
+    def __new__(cls, *args, **kwargs):
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(TranslationModel, cls).__new__(cls)
+        return cls.instance
+
+    def __init__(self, envFilePath='', source='en', target='ko'):
         self.source = source
         self.target = target
         self.__naver_client_key = NaverClientKey(envFilePath)

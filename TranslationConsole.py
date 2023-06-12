@@ -53,8 +53,8 @@ class TranslateConsole:
             self.printProgressBar(0, size, length=50)
         for (idx, (state, line)) in enumerate(text):
             if state:
-                # translateText += self.translationModel.translate(line)
-                translateText += line  # testing
+                translateText += self.translationModel.translate(line)
+                # translateText += line  # testing
                 translated_text_count += len(line)
             else:
                 translateText += line
@@ -148,6 +148,15 @@ class TranslateConsole:
         self.__c_translate()
         self.__c_save(path2)
 
+
+    """
+    ================================================================
+    
+    Facade Pattern
+    사용자에게 간단한 인터페이스 제공
+    
+    ================================================================
+    """
     def console(self):
         print(TranslationConsoleConfiguration.description + '\n')
         while True:
@@ -179,7 +188,6 @@ class TranslateConsole:
                 break
             else:
                 self.__c_invalid_command()
-        self.app.exec_()
 
     @staticmethod
     def printProgressBar(idx, total, length=100):

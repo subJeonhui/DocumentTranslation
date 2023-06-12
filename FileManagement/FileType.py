@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class StrEnum(str, Enum):
     def _generate_next_value_(name, start, count, last_values):
         return name
@@ -36,8 +37,11 @@ class FileExt(StrEnum):
             return False
 
 
-# Composite Pattern
 class Component:
+    """
+    Composite Pattern
+    """
+
     def tree(self):
         pass
 
@@ -45,8 +49,11 @@ class Component:
         pass
 
 
-# Leaf
 class File(Component):
+    """
+    Leaf
+    """
+
     def __init__(self, name, path):
         self.name = name
         self.path = path
@@ -58,7 +65,7 @@ class File(Component):
 
     def show_tree(self, lv, option=False):
         if not option and not FileExt.validation(self.ext): return ''
-        lvt = '\t'*lv
+        lvt = '\t' * lv
         if not FileExt.validation(self.ext):
             return f"{lvt} ▷ {self.name}\n"
         else:
@@ -68,8 +75,11 @@ class File(Component):
         return f"{self.path}/{self.name}"
 
 
-# Composite
 class Directory(Component):
+    """
+    Composite
+    """
+
     def __init__(self, path):
         self.path = path
         self.components = []
@@ -81,7 +91,7 @@ class Directory(Component):
         self.components.append(component)
 
     def show_tree(self, lv=0, option=False):
-        lvt = '\t'*lv
+        lvt = '\t' * lv
         dirName = self.path.split('/')
         s = f"{lvt} ❖ /{dirName[-1]}\n"
         for c in self.components:

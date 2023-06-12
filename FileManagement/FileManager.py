@@ -38,11 +38,16 @@ class FileManager:
         self.select = File(name, path)
         self.__setLoader()
 
+    """
+    ================================================================
+    
+    Strategy Pattern
+    Runtime 중 알고리즘을 선택
+    사용자가 선택한 파일에 따라 다른 Loader을 선택
+    
+    ================================================================
+    """
     def __setLoader(self):
-        '''
-        Strategy Pattern
-        set Loader in runtime
-        '''
         if self.select.ext == FileExt.HTML:
             self.fileLoader = HTMLLoader(self.select.fullPath())
         elif self.select.ext == FileExt.MARKDOWN:
@@ -58,6 +63,7 @@ class FileManager:
             new_path = self.select.fullPath().split("/")
             new_path[-1] = "translated-" + new_path[-1]
             path = "/".join(new_path)
+        print(path)
         file = Path(path)
         file.parent.mkdir(exist_ok=True, parents=True)
         file.write_text(text)
