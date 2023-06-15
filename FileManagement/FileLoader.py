@@ -5,6 +5,7 @@ class Loader:
     def load(self):
         pass
 
+
 class HTMLLoader(Loader):
     def __init__(self, path: str):
         self.path = path
@@ -60,3 +61,4 @@ class MarkDownLoader(Loader):
                 body.append((False, line))
 
         return body
+

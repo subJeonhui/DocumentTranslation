@@ -97,3 +97,4 @@ class Directory(Component):
         for c in self.components:
             s += f"{c.show_tree(lv + 1, option=option)}"
         return s
+

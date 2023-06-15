@@ -56,6 +56,7 @@ class TranslationModel:
             raise Exception(f"Status Code Error"
                             f"Status Code: {response.status_code}")
 
+
     def setSource(self, source):
         self.source = source
 

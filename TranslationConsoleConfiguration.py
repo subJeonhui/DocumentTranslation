@@ -51,7 +51,6 @@ class TranslationConsoleConfiguration:
              "  \_/  |_|    \__,_||_| |_||___/|_| \__,_| \__||_| \___/ |_| |_| ") + "\033[93m|\n",
          f"{__yellow}|{__magenta}" + "{:^80}".format("") + __default + '\033[93m|\n',
          f"{__yellow}⎩{'':⎽^80}⎭" + __default])
-
     help = __cyan + f"\n⎧⎺⎺{' Document Translation Commands ':⎺<78}⎫\n" \
                     f"|{' select':16}|{' s':4} {'[path]':12}{': Select the file':46}|\n" \
                     f"|{' translate':16}|{' t':4} {'':12}{': Translate the selected file.':46}|\n" \
@@ -69,24 +68,20 @@ class TranslationConsoleConfiguration:
                     f"|{'':-<80}|\n" \
                     f"|{' (command) -h : You can check the detailed description of the command.':80}|\n" \
                     f"⎩{'':⎽^80}⎭{__default}\n"
-
     select_help = __cyan + f"\n⎧⎺⎺{' select ':⎺<78}⎫\n" \
                            f"|{' select':16}|{' s':4} {'[path]':12}{': Select the file':46}|\n" \
                            f"|{'':-^16}-{'':-^5}{'':-^12}{'':-^46}|\n" \
                            f"|{' [path]':16}{': The path to the file you want to select':64}|\n" \
                            f"⎩{'':⎽^80}⎭{__default}\n"
-
     translate_help = __cyan + f"\n⎧⎺⎺{' translate ':⎺<78}⎫\n" \
                               f"|{' translate':16}|{' t':4} {'':12}{': Translate the selected file.':46}|\n" \
                               f"⎩{'':⎽^80}⎭{__default}\n"
-
     save_help = __cyan + f"\n⎧⎺⎺{' save ':⎺<78}⎫\n" \
                          f"|{' save':16}|{' sv':4} {'(path)':12}{': Save the selected file.':46}|\n" \
                          f"|{'':-^16}-{'':-^5}{'':-^12}{'':-^46}|\n" \
                          f"|{' [path]':16}{': The path to the file you want to save':64}|\n" \
                          f"|{'':16}{'  If not entered, it is saved in the selected file location.':64}|\n" \
                          f"⎩{'':⎽^80}⎭{__default}\n"
-
     quick_translate_help = __cyan + f"\n⎧⎺⎺{' quick translate ':⎺<78}⎫\n" \
                                     f"|{' quickTranslate':16}|{' qt':4} {'[path](path)':12}{': select, translate, save':46}|\n" \
                                     f"|{'':-^16}-{'':-^5}{'':-^12}{'':-^46}|\n" \
@@ -94,30 +89,25 @@ class TranslationConsoleConfiguration:
                                     f"|{' (path)':16}{': The path to the file you want to save':64}|\n" \
                                     f"|{'':16}{'  If not entered, it is saved in the selected file location.':64}|\n" \
                                     f"⎩{'':⎽^80}⎭{__default}\n"
-
     show_help = __cyan + f"\n⎧⎺⎺{' show ':⎺<78}⎫\n" \
                          f"|{' show':16}|{' sh':4} {'(option)':12}{': Shows the structure of valid document files.':46}|\n" \
                          f"|{'':-^16}-{'':-^5}{'':-^12}{'':-^46}|\n" \
                          f"|{' (option)':16}{': Shows a tree of selectable files from the current path.':64}|\n" \
                          f"|{' (option) -al':16}{': Shows a tree of all the files from the current path.':64}|\n" \
                          f"⎩{'':⎽^80}⎭{__default}\n"
-
     setSource_help = __cyan + f"\n⎧⎺⎺{' set source ':⎺<78}⎫\n" \
                               f"|{' setSource':16}|{' sc':4} {'[lang code]':12}{': Set the source language.':46}|\n" \
                               f"|{'':-^16}-{'':-^5}{'':-^12}{'':-^46}|\n" \
                               f"|{' [lang code]':16}{': set language code of the file to be translated':64}|\n" \
                               f"⎩{'':⎽^80}⎭{__default}\n"
-
     setTarget_help = __cyan + f"\n⎧⎺⎺{' set target ':⎺<78}⎫\n" \
                               f"|{' setTarget':16}|{' st':4} {'[lang code]':12}{': Set the target language.':46}|\n" \
                               f"|{'':-^16}-{'':-^5}{'':-^12}{'':-^46}|\n" \
                               f"|{' [lang code]':16}{': The language code in which you want to translate the file':64}|\n" \
                               f"⎩{'':⎽^80}⎭{__default}\n"
-
     status_help = __cyan + f"\n⎧⎺⎺{' status ':⎺<78}⎫\n" \
                            f"|{' status':16}|{' stat':17}{': Shows the current status.':46}|\n" \
                            f"⎩{'':⎽^80}⎭{__default}\n"
-
     support_language = {'Korean': 'ko',
                         'English': 'en',
                         'Japanese': 'ja',
@@ -131,7 +121,6 @@ class TranslationConsoleConfiguration:
                         'Spanish': 'es',
                         'Italian': 'it',
                         'French': 'fr'}
-
     support_language_description = __cyan + \
                                    f"⎧⎺⎺{' supported language ':⎺<38}⎫\n" \
                                    f"|{'language':^30} | {'code':^6} |\n" + \

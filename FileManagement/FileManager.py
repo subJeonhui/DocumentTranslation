@@ -91,3 +91,4 @@ class FileManager:
             if log[0] == date:
                 date_log.append(log)
         return date_log
+

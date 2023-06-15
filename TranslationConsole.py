@@ -15,7 +15,7 @@ class TranslateConsole:
         today_logs = self.fileManager.read_log_with_date(self.logFilePath)
         self.count = reduce(lambda x, y: x + int(y[2]), today_logs, 0)
         self.translationModel = TranslationModel(self.envFilePath)
-        self.translateText = ''
+        self.translatedText = ''
 
     def __setProgramFile(self):
         with open(self.programFilePath, 'r') as f:
